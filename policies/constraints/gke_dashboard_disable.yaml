@@ -12,20 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-apiVersion: constraints.gatekeeper.sh/v1alpha1 # Copyright 2019 Google LLC
-kind: GCPGKEDashboardConstraintV1
-metadata:
-  name: disable_gke_dashboard
-  annotations:
-    description: Ensure Kubernetes web UI / Dashboard is disabled
-    # This constraint has not been validated by the formal CIS certification process.
-    bundles.validator.forsetisecurity.org/cis-v1.0: 7.06
-    bundles.validator.forsetisecurity.org/cis-v1.1: 7.06
-    bundles.validator.forsetisecurity.org/gke-hardening-v2019.11.11: DISABLED_GKE_DASHBOARD
-    bundles.validator.forsetisecurity.org/scorecard-v1: security
-spec:
-  severity: high
-  match:
-    target: # {"$ref":"#/definitions/io.k8s.cli.setters.target"}
-    - organizations/**
-  parameters: {}
+
+#### REMOVED
+#### See https://github.com/GoogleCloudPlatform/terraform-example-foundation-app/tree/main/5-infrastructure
+
+# apiVersion: constraints.gatekeeper.sh/v1alpha1 # Copyright 2019 Google LLC
+# kind: GCPGKEDashboardConstraintV1
+# metadata:
+#   name: disable_gke_dashboard
+#   annotations:
+#     description: Ensure Kubernetes web UI / Dashboard is disabled
+#     # This constraint has not been validated by the formal CIS certification process.
+#     bundles.validator.forsetisecurity.org/cis-v1.0: 7.06
+#     bundles.validator.forsetisecurity.org/cis-v1.1: 7.06
+#     bundles.validator.forsetisecurity.org/gke-hardening-v2019.11.11: DISABLED_GKE_DASHBOARD
+#     bundles.validator.forsetisecurity.org/scorecard-v1: security
+# spec:
+#   severity: high
+#   match:
+#     target: # {"$ref":"#/definitions/io.k8s.cli.setters.target"}
+#     - organizations/**
+#   parameters: {}

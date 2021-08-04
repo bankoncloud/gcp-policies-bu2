@@ -34,4 +34,5 @@ spec:
   #     authorized_networks: ["...", "..."]
   # to specify that authorized networks need to be subnets of the given ones.
   parameters:
-    authorized_networks: ["10.0.64.0/32"] # for example foundation subnet
+    authorized_networks:
+    - 10.0.64.0/32
