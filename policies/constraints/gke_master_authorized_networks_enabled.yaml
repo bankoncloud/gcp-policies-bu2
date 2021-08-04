@@ -35,4 +35,5 @@ spec:
   # to specify that authorized networks need to be subnets of the given ones.
   parameters:
     authorized_networks:
-    - 10.0.64.0/32
+    - 10.0.64.0/32 # Shared VPC
+    - 100.64.64.0/21 # Pods
